@@ -13,5 +13,13 @@
   <context:component-scan base-package="controller"></context:component-scan>
   <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
   <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
-  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
+  <bean id="viewResolver" 
+    class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix">
+      <value>/WEB-INF/content/</value>
+    </property>
+    <property name="suffix">
+      <value>.jsp</value>
+    </property>
+  </bean>
 </beans>
