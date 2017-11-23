@@ -65,6 +65,28 @@ public class UserController {
         return "user/loginForm";
     }
     
+    @RequestMapping(value="list", method=RequestMethod.POST)
+    public String userList(
+        @RequestParam("loginname") String loginname,
+        @RequestParam("password") String password,
+        @RequestParam("username") String username,
+        Model model
+        ) {
+        logger.info("userList方法被调用了");
+        User user = new User();
+        user.setLoginname(loginname);
+        user.setPassword(password);
+        user.setUsername(username);
+        userList.add(user);
+        
+        model.addAttribute("userList", userList);
+        return "user/userList";
+    }
     
+    @RequestMapping(value="list", method=RequestMethod.GET)
+    public String list() {
+        logger.info("userList GET方法被调用了");
+        return "user/userList";
+    }
     
 }
