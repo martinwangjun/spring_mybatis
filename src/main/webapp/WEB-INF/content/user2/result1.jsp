@@ -13,10 +13,9 @@
 </head>
 <body>
 <div class="container">
-<h2>数据绑定测试</h2>
-<a href="item/detail/1">测试@PathVariable注解</a><br><br>
-<a href="item/requestHeaderTest">测试@RequestHeader注解</a><br><br>
-<a href="item/cookieTest">测试@CookieValue注解</a><br><br>
+访问page作用范围域中的loginname对象：${pageScope.loginname }<br>
+访问request作用范围域中的loginname对象：${requestScope.loginname }<br>
+访问session作用范围域中的loginname对象：${sessionScope.loginname }<br>
 </div>
 </body>
 </html>

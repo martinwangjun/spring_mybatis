@@ -13,10 +13,22 @@
 </head>
 <body>
 <div class="container">
-<h2>数据绑定测试</h2>
-<a href="item/detail/1">测试@PathVariable注解</a><br><br>
-<a href="item/requestHeaderTest">测试@RequestHeader注解</a><br><br>
-<a href="item/cookieTest">测试@CookieValue注解</a><br><br>
+<h3>测试Model</h3>
+<form action="login1" method="post">
+     <table>
+         <tr>
+            <td><label>登录名: </label></td>
+             <td><input type="text" id="loginname" name="loginname" ></td>
+         </tr>
+         <tr>
+            <td><label>密码: </label></td>
+             <td><input type="password" id="password" name="password" ></td>
+         </tr>
+         <tr>
+             <td><input id="submit" type="submit" value="登录"></td>
+         </tr>
+     </table>
+</form>
 </div>
 </body>
 </html>

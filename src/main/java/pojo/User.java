@@ -14,6 +14,13 @@ public class User implements Serializable{
         super();
     }
     
+    public User(String loginname, String password, String username) {
+        super();
+        this.loginname = loginname;
+        this.password = password;
+        this.username = username;
+    }
+    
     public String getLoginname() {
         return loginname;
     }
@@ -31,5 +38,11 @@ public class User implements Serializable{
     }
     public void setUsername(String username) {
         this.username = username;
+    }
+    
+    @Override
+    public String toString() {
+        return "User [loginname=" + loginname + ", password=" + password
+                + ", username=" + username + "]";
     }
 }

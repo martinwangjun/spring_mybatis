@@ -4,6 +4,7 @@ import java.util.Date;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 public class HelloController{
-    private static final Log logger = LogFactory.getLog(HelloController.class);
+    private static final Logger logger = Logger.getLogger(HelloController.class);
     
     @RequestMapping(value="/hello")
     public ModelAndView hello() {
